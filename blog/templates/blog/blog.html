@@ -1,0 +1,11 @@
+{% extends 'personal/header.html' %}
+
+{% block content %}
+  <h1>All Posts</h1>
+  <br>
+  {% for post in object_list %}
+    <h5>{{ post.date|date:"Y-m-d" }}<a href="/blog/{{ post.id }}"> {{ post.title }}</a></h5>
+  {% empty %}
+    <h5>No posts yet!</h5>
+  {% endfor %}
+{% endblock %}

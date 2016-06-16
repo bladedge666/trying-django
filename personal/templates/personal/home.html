@@ -1,0 +1,12 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+  <p>
+    This is my personal home page that extends the header page.
+    Remember - You need to extend a page only if it is going to be displayed all the time.
+    Otherwise, create an includes directory and inside it include all the snippets.
+  </p>
+
+  {% include "personal/includes/htmlsnippet.html" %}
+{% endblock %}
+ 
